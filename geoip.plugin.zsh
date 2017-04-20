@@ -30,10 +30,10 @@ localize(){
 }
 
 print_info(){
-	echo "$name_ip: $IP"
-	echo "$name_location: $COUNTRY -> $REGION -> $CITY"
-	echo "$name_timezone: $TIMEZONE"
-	echo "$name_isp: $ISP"
+	echo "$name_ip: $IP" | tr -d '"'
+	echo "$name_location: $COUNTRY -> $REGION -> $CITY" | tr -d '"'
+	echo "$name_timezone: $TIMEZONE" | tr -d '"'
+	echo "$name_isp: $ISP" | tr -d '"'
 }
 
 alias geoip=get_geo_info

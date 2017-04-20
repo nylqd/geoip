@@ -1,6 +1,6 @@
 # geoip
 
-An [Oh-My-Zsh](http://ohmyz.sh/) plugin get IP Geo information from free [API](http://ip-api.com/), available for Linux and Mac OS X, not test on Windows. (Support in both Chinese and English).
+An [Oh-My-Zsh](http://ohmyz.sh/) plugin get IP Geo information from free [API](http://ip-api.com/), available for Linux and macOS, not test on Windows. (Support in both **Chinese** and **English**).
 
 ### How to install
 - Clone this repo to your Oh-My-Zsh plugin directory or custom directory
