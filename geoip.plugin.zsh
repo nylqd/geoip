@@ -22,18 +22,25 @@ localize(){
 	name_isp="ISP"
 	if locale | grep -q zh_CN; then
 		lang_local='zh-CN'
-		name_ip='IP地址'
-		name_location='位置'
-		name_timezone='时区'
-		name_isp="运营商"
+		name_ip='网络地址'
+		name_location='地理位置'
+		name_timezone='所处时区'
+		name_isp="服务提供"
 	fi
 }
 
 print_info(){
-	echo "$name_ip: $IP" | tr -d '"'
-	echo "$name_location: $COUNTRY -> $REGION -> $CITY" | tr -d '"'
-	echo "$name_timezone: $TIMEZONE" | tr -d '"'
-	echo "$name_isp: $ISP" | tr -d '"'
+	VALUES=($name_ip $name_location $name_timezone $name_isp $name_ip)
+	MAX=1
+	for i in "${VALUES[@]}"; do
+		[ ${#i} -gt ${MAX} ] && MAX=${#i}
+	done
+
+	printf "%*s :: %s\n" $MAX $name_ip $IP | tr -d '"'
+	printf "%*s :: %s\n" $MAX $name_location $COUNTRY' -> '$REGION' -> '$CITY | tr -d '"'
+	printf "%*s :: %s\n" $MAX $name_timezone $TIMEZONE | tr -d '"'
+	printf "%*s :: %s\n" $MAX $name_isp $ISP | tr -d '"'
+
 }
 
 alias geoip=get_geo_info
