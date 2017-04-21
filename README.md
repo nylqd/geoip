@@ -31,23 +31,23 @@ plugins=(git bundler osx rake ruby geoip)
 ```
 # geoip 114.114.114.114
 
-IP地址: 114.114.114.114
-位置: 中国 -> 江苏省 -> 南京
-时区: Asia/Shanghai
-运营商: International Pioneering Park
+网络地址 :: 114.114.114.114
+地理位置 :: 中国 -> 江苏省 -> 南京
+所处时区 :: Asia/Shanghai
+服务提供 :: International Pioneering Park
 
 # geoip 8.8.8.8
 
-IP Address: 8.8.8.8
-Location: United States -> California -> Mountain View
-Timezone: America/Los_Angeles
-ISP: Google
+IP Address :: 8.8.8.8
+  Location :: United States -> California -> Mountain View
+  Timezone :: America/Los_Angeles
+       ISP :: Google
 
 # geoip github.com
 
-IP Address: 192.30.253.113
-Location: United States -> California -> San Francisco
-Timezone: America/Los_Angeles
-ISP: GitHub
+IP Address :: 192.30.253.113
+  Location :: United States -> California -> San Francisco
+  Timezone :: America/Los_Angeles
+       ISP :: GitHub
 ```
 
